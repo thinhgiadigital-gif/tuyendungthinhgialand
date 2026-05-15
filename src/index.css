@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-gold: #F4AA16;
+  --color-brand-gold-hover: #D89512;
+  --color-brand-brown-deep: #5B4333;
+  --color-brand-brown-secondary: #7A5A43;
+  --color-brand-tech-blue: #8EDCFF;
+  --color-brand-gray-light: #F5F5F5;
+
+  --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-gray-light text-brand-brown-deep font-sans;
+  }
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.cinematic-overlay {
+  background: linear-gradient(135deg, rgba(91, 67, 51, 0.9) 0%, rgba(91, 67, 51, 0.4) 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(244, 170, 22, 0.3);
+}
+
+.tech-glow {
+  box-shadow: 0 0 15px rgba(142, 220, 255, 0.4);
+}
+
+@keyframes scroll-down {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(10px); opacity: 0; }
+}
+
+.animate-scroll {
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
